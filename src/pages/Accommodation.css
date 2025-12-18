@@ -1,0 +1,51 @@
+.accommodation-page {
+  min-height: 100vh;
+  padding: 120px 60px;
+  background: linear-gradient(#000, #0a1a2f);
+  color: #e6f1ff;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.accommodation-title {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  color: #00eaff;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.accommodation-box {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 40px;
+  line-height: 1.8;
+}
+
+.accommodation-box ul {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.accommodation-box li {
+  margin-bottom: 10px;
+}
+
+.note {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #7aa7ff;
+}
+
+@media (max-width: 768px) {
+  .accommodation-page {
+    padding: 100px 20px;
+  }
+
+  .accommodation-box {
+    padding: 25px;
+  }
+}

@@ -1,0 +1,104 @@
+.events-page {
+  min-height: 100vh;
+  padding: 120px 60px;
+  background: radial-gradient(circle at top, #0a1a2f, #000);
+  color: #e6f1ff;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.events-title {
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  color: #00eaff;
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Event Card */
+.event-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  padding: 30px;
+  cursor: pointer;
+  min-height: 260px;
+  overflow: hidden;
+  transition: 0.35s;
+  border: 1px solid rgba(0, 234, 255, 0.3);
+}
+
+/* Dark overlay for readability */
+.event-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+/* Title */
+.event-card h3 {
+  position: relative;
+  z-index: 1;
+  font-family: "Orbitron", sans-serif;
+  color: #00eaff;
+  margin-bottom: 10px;
+}
+
+/* Description (hidden by default) */
+.event-desc {
+  position: relative;
+  z-index: 1;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Hover expand (desktop) */
+.event-card:hover .event-desc {
+  max-height: 200px;
+  opacity: 1;
+}
+
+/* Tap expand (mobile) */
+.event-card.active .event-desc {
+  max-height: 200px;
+  opacity: 1;
+}
+
+/* Glow effects */
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.6);
+}
+
+.event-card.active {
+  box-shadow: 0 0 40px rgba(0, 234, 255, 0.9);
+  transform: scale(1.05);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .events-page {
+    padding: 100px 20px;
+  }
+
+  .events-title {
+    font-size: 2.2rem;
+  }
+
+  .event-card {
+    min-height: 220px;
+  }
+}

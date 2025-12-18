@@ -1,0 +1,84 @@
+.home {
+  min-height: calc(100vh - 70px);
+  background: url("https://images.unsplash.com/photo-1535223289827-42f1e9919769")
+    center/cover no-repeat;
+  position: relative;
+  padding-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e6f1ff;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 4rem;
+  background: linear-gradient(90deg, #00eaff, #7f7cff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+}
+
+.description {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 30px;
+  margin: 8px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  max-width: 100%;
+}
+
+.btn.primary {
+  background: #00eaff;
+  border: none;
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.6);
+}
+
+.btn.primary:hover {
+  box-shadow: 0 0 35px rgba(0, 234, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #00eaff;
+  color: #00eaff;
+}
+
+.btn.outline:hover {
+  background: #00eaff;
+  color: #000;
+}
